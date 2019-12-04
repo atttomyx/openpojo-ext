@@ -2,24 +2,46 @@
 
 An extension to [openpojo](https://github.com/OpenPojo/openpojo), providing additional assertions. Made available here to prevent copy/paste across projects.
 
-## Deploying to Maven Local
+## Deploying
+
+Maven Local
 
 ```
 gradlew clean build publishToMavenLocal
 ```
 
+atttomyx-repo
+
+```
+gradlew clean build publish
+```
+
 ## Accessing in another project
 
-1. Ensure that your project is pulling from `mavenLocal`
+1. Add credentials to `.gradle/gradle.properties`:
+
+```
+mavenUser={yourUsername}
+mavenPassword={yourPassword}
+```
+
+2. Ensure that your project is pulling from `mavenLocal` and `atttomyx-repo`.
 
 ```
     repositories {
         mavenLocal()
+        maven {
+            url "https://atttomyx-repo.appspot.com"
+            credentials {
+                username "$mavenUser"
+                password "$mavenPassword"
+            }
+        }
         ...
     }
 ```
 
-2. Add the dependency to your project's `build.gradle`.
+3. Add the dependency to your project's `build.gradle`.
 
 ```
 testCompile "com.atttomyx:openpojo-ext:0.0.1"
