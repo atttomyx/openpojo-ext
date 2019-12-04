@@ -4,6 +4,10 @@ An extension to [openpojo](https://github.com/OpenPojo/openpojo), providing addi
 
 ## Deploying
 
+1. update the version in `build.gradle`
+
+2. deploy:
+
 Maven Local
 
 ```
