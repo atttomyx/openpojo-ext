@@ -2,53 +2,23 @@
 
 An extension to [openpojo](https://github.com/OpenPojo/openpojo), providing additional assertions. Made available here to prevent copy/paste across projects.
 
-## Deploying
-
-1. update the version in `build.gradle`
-
-2. deploy:
-
-Maven Local
-
-```
-gradlew clean build publishToMavenLocal
-```
-
-atttomyx-repo
-
-```
-gradlew clean build publish
-```
-
 ## Accessing in another project
 
-1. Add credentials to `.gradle/gradle.properties`:
-
-```
-mavenUser={yourUsername}
-mavenPassword={yourPassword}
-```
-
-2. Ensure that your project is pulling from `mavenLocal` and `atttomyx-repo`.
-
+1. Add the `gitpack` repository to your `build.gradle`
+   
 ```
     repositories {
-        mavenLocal()
-        maven {
-            url "https://atttomyx-repo.appspot.com"
-            credentials {
-                username "$mavenUser"
-                password "$mavenPassword"
-            }
-        }
         ...
+        maven { url 'https://jitpack.io' }
     }
 ```
 
-3. Add the dependency to your project's `build.gradle`.
+2. Add the dependency to your `build.gradle`
 
 ```
-testCompile "com.atttomyx:openpojo-ext:0.0.1"
+    dependencies {
+        testCompile 'com.github.atttomyx:openpojo-ext:{version}'
+	}
 ```
 
 3. Add a `TestDtos` test for your DTOs.
