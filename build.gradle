@@ -1,36 +1,20 @@
 repositories {
     mavenLocal()
     mavenCentral()
-    maven {
-        url "https://atttomyx-repo.appspot.com"
-        credentials {
-            username "$mavenUser"
-            password "$mavenPassword"
-        }
-    }
 }
 
 apply plugin: 'java'
 apply plugin: 'maven-publish'
 
 group = 'com.atttomyx'
-version = '0.1.0'
+version = '0.1.1'
 
 publishing {
-    repositories {
-        maven {
-            url "https://atttomyx-repo.appspot.com"
-            credentials {
-                username "$mavenUser"
-                password "$mavenPassword"
-            }
-        }
-    }
     publications {
         maven(MavenPublication) {
             groupId 'com.atttomyx'
             artifactId 'openpojo-ext'
-            version '0.1.0'
+            version '0.1.1'
 
             from components.java
         }
@@ -41,7 +25,8 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile "com.atttomyx:commons:0.0.1"
+    compile "com.google.guava:guava:20.0"
+    compile "org.apache.commons:commons-lang3:3.9"
 
     compileOnly "org.projectlombok:lombok:1.18.8"
     annotationProcessor "org.projectlombok:lombok:1.18.8"
