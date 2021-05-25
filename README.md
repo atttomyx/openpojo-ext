@@ -4,7 +4,7 @@ An extension to [openpojo](https://github.com/OpenPojo/openpojo), providing addi
 
 ## Accessing in another project
 
-1. Add the `gitpack` repository to your `build.gradle`
+1. Add the `jitpack` repository to your `build.gradle`
    
 ```
     repositories {
