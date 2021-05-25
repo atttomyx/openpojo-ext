@@ -18,7 +18,7 @@ An extension to [openpojo](https://github.com/OpenPojo/openpojo), providing addi
 ```
     dependencies {
         testCompile 'com.github.atttomyx:openpojo-ext:{version}'
-	}
+    }
 ```
 
 3. Add a `TestDtos` test for your DTOs.
