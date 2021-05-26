@@ -12,7 +12,7 @@ public class ExcludeTestsFilter implements PojoClassFilter {
     public boolean include(final PojoClass pojoClass) {
         final String name = pojoClass.getClazz().getSimpleName();
 
-        return StringUtils.startsWith(name, "Test") || StringUtils.endsWith(name, "Test");
+        return !(StringUtils.startsWith(name, "Test") || StringUtils.endsWith(name, "Test"));
     }
 
     @Override
