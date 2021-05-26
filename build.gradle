@@ -7,14 +7,14 @@ apply plugin: 'java'
 apply plugin: 'maven-publish'
 
 group = 'com.atttomyx'
-version = '1.0.1'
+version = '1.0.2'
 
 publishing {
     publications {
         maven(MavenPublication) {
             groupId 'com.atttomyx'
             artifactId 'openpojo-ext'
-            version '1.0.1'
+            version '1.0.2'
 
             from components.java
         }
@@ -31,6 +31,6 @@ dependencies {
     compileOnly "org.projectlombok:lombok:1.18.8"
     annotationProcessor "org.projectlombok:lombok:1.18.8"
 
-    compile "com.openpojo:openpojo:0.8.13"
+    compile "com.openpojo:openpojo:0.9.1"
     compile "junit:junit:4.12"
 }
