@@ -2,14 +2,17 @@ package com.openpojo.reflection.filters;
 
 import com.openpojo.reflection.PojoClass;
 import com.openpojo.reflection.PojoClassFilter;
+import org.apache.commons.lang3.StringUtils;
 
 /**
- * This filter will exclude any classes whose names begin with "Test".
+ * This filter will exclude any classes whose names begin or end with "Test".
  */
 public class ExcludeTestsFilter implements PojoClassFilter {
 
     public boolean include(final PojoClass pojoClass) {
-        return !pojoClass.getClazz().getSimpleName().startsWith("Test");
+        final String name = pojoClass.getClazz().getSimpleName();
+
+        return !StringUtils.startsWith(name, "Test") && !StringUtils.endsWith(name, "Test");
     }
 
     @Override
