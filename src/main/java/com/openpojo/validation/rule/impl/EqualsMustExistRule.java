@@ -4,11 +4,10 @@ import com.openpojo.reflection.PojoClass;
 import com.openpojo.reflection.PojoMethod;
 import com.openpojo.validation.affirm.Affirm;
 import com.openpojo.validation.rule.Rule;
-
 import java.util.List;
 
 /**
- * This rule ensures that the pojo has implemented an equals method
+ * This rule ensures that the pojo has implemented an equals method.
  */
 public class EqualsMustExistRule implements Rule {
 

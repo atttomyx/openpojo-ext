@@ -4,11 +4,10 @@ import com.openpojo.reflection.PojoClass;
 import com.openpojo.reflection.PojoMethod;
 import com.openpojo.validation.affirm.Affirm;
 import com.openpojo.validation.rule.Rule;
-
 import java.util.List;
 
 /**
- * This rule ensures that the pojo has implemented a hashCode method
+ * This rule ensures that the pojo has implemented a hashCode method.
  */
 public class HashCodeMustExistRule implements Rule {
 

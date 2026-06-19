@@ -6,7 +6,7 @@ import com.openpojo.validation.test.Tester;
 import com.openpojo.validation.utils.ValidationHelper;
 
 /**
- * Test the equals method
+ * Test the equals method.
  */
 public class EqualsTester implements Tester {
 

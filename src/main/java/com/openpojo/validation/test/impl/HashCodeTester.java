@@ -6,7 +6,7 @@ import com.openpojo.validation.test.Tester;
 import com.openpojo.validation.utils.ValidationHelper;
 
 /**
- * Test the hashCode method
+ * Test the hashCode method.
  */
 public class HashCodeTester implements Tester {
 

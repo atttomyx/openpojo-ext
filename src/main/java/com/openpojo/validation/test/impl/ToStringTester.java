@@ -7,7 +7,7 @@ import com.openpojo.validation.utils.ValidationHelper;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * Test the toString method
+ * Test the toString method.
  */
 public class ToStringTester implements Tester {
 

@@ -1,17 +1,16 @@
 package com.openpojo.reflection.filters;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+
 import com.openpojo.reflection.PojoClass;
 import com.openpojo.reflection.PojoClassFilter;
-
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.google.common.base.Preconditions.checkNotNull;
-
 /**
- * This filter will exclude any of the specified classes
+ * This filter will exclude any of the specified classes.
  */
 public class ExcludeClassesFilter implements PojoClassFilter {
 

@@ -12,9 +12,13 @@ public class ExcludeTestsFilter implements PojoClassFilter {
     public boolean include(final PojoClass pojoClass) {
         final String name = pojoClass.getClazz().getName();
         final int indexPeriod = StringUtils.lastIndexOf(name, ".");
-        final String withoutPeriod = indexPeriod > -1 ? StringUtils.substring(name, indexPeriod + 1, name.length()) : name;
+        final String withoutPeriod = indexPeriod > -1
+            ? StringUtils.substring(name, indexPeriod + 1, name.length())
+            : name;
         final int indexDollar = StringUtils.indexOf(withoutPeriod, "$");
-        final String withoutDollar = indexDollar > -1 ? StringUtils.substring(withoutPeriod, 0, indexDollar) : withoutPeriod;
+        final String withoutDollar = indexDollar > -1
+            ? StringUtils.substring(withoutPeriod, 0, indexDollar)
+            : withoutPeriod;
 
         return !(StringUtils.startsWith(withoutDollar, "Test") || StringUtils.endsWith(withoutDollar, "Test"));
     }

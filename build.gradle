@@ -1,36 +1,50 @@
-repositories {
-    mavenLocal()
-    mavenCentral()
+plugins {
+    id "com.google.cloud.artifactregistry.gradle-plugin" version "2.2.5"
+    id "java-library"
+    id "maven-publish"
+    id "checkstyle"
 }
 
-apply plugin: 'java'
-apply plugin: 'maven-publish'
-
-group = 'com.atttomyx'
-version = '1.2.1'
-
 publishing {
+    repositories {
+        maven {
+            url "artifactregistry://us-west2-maven.pkg.dev/milesoft-repo/repo-maven"
+        }
+    }
     publications {
         maven(MavenPublication) {
-            groupId 'com.atttomyx'
+            groupId 'io.milesoft'
             artifactId 'openpojo-ext'
-            version '1.2.1'
+            version '1.0.0'
 
             from components.java
         }
     }
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url "artifactregistry://us-west2-maven.pkg.dev/milesoft-repo/repo-maven"
+    }
+}
+
+checkstyle {
+    toolVersion = "10.2"
+    maxWarnings = 0
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
 
 dependencies {
-    compile "com.google.guava:guava:31.1-jre"
-    compile "org.apache.commons:commons-lang3:3.12.0"
+    api "io.milesoft:commons:1.0.0"
 
-    compileOnly "org.projectlombok:lombok:1.18.24"
-    annotationProcessor "org.projectlombok:lombok:1.18.24"
+    annotationProcessor "org.projectlombok:lombok:1.18.46"
 
-    compile "com.openpojo:openpojo:0.9.1"
-    compile "junit:junit:4.13.2"
+    api "com.openpojo:openpojo:0.9.1"
+    api "junit:junit:4.13.2"
 }
