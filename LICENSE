@@ -1,11 +1,20 @@
 Copyright (c) 2019-2026 Mile Software, LLC. All rights reserved.
 
-Unless otherwise noted, all contents of this repository are protected
-under the foregoing copyright and are under the exclusive ownership of
-Mile Software, LLC.
+This software and its associated libraries, SDKs, and components (collectively, the "Software") 
+are the exclusive, proprietary property of Mile Software, LLC. 
 
-For more information, see
+Subject to your active, valid subscription or enterprise agreement with Mile Software, LLC, 
+you are hereby granted a non-exclusive, non-transferable, revocable license to ingest, 
+compile, and link against this Software solely for the purpose of integrating your custom 
+applications with Mile Software hosted platform services.
 
-    https://milesoft.io/user-terms-of-service
+EXCEPT AS EXPLICITLY AUTHORIZED BY MILE SOFTWARE, LLC IN WRITING, YOU MAY NOT:
+1. Decompile, reverse engineer, or attempt to derive the source code of any distributed binaries.
+2. Redistribute, sell, lease, or sub-license the Software as a standalone component to any third party.
+3. Remove, alter, or obscure this copyright notice or any other proprietary markers.
 
-This notice may not be removed.
+Your use of this Software is strictly governed by the Master Terms of Service located at:
+https://milesoft.io/user-terms-of-service
+
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+THIS NOTICE MUST BE RETAINED IN ALL COPIES OR SUBSTANTIAL PORTIONS OF THE SOFTWARE.
