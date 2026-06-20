@@ -1,6 +1,6 @@
 package com.openpojo.reflection.filters;
 
-import static com.google.common.base.Preconditions.checkNotNull;
+import static java.util.Objects.requireNonNull;
 
 import com.openpojo.reflection.PojoClass;
 import com.openpojo.reflection.PojoClassFilter;
@@ -21,7 +21,7 @@ public class ExcludeClassesFilter implements PojoClassFilter {
     }
 
     public ExcludeClassesFilter(Collection<Class> exclude) {
-        checkNotNull(exclude, "exclude must not be null");
+        requireNonNull(exclude, "exclude must not be null");
 
         this.exclude = exclude.stream()
                 .map(Class::getName)
