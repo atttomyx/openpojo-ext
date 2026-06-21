@@ -4,7 +4,7 @@ import com.openpojo.reflection.PojoClass;
 import com.openpojo.validation.affirm.Affirm;
 import com.openpojo.validation.test.Tester;
 import com.openpojo.validation.utils.ValidationHelper;
-import org.apache.commons.lang3.StringUtils;
+import io.milesoft.commons.utils.StringUtils;
 
 /**
  * Test the toString method.

@@ -2,7 +2,7 @@ package com.openpojo.reflection.filters;
 
 import com.openpojo.reflection.PojoClass;
 import com.openpojo.reflection.PojoClassFilter;
-import org.apache.commons.lang3.StringUtils;
+import io.milesoft.commons.utils.StringUtils;
 
 /**
  * This filter will exclude any classes whose names begin or end with "Test".

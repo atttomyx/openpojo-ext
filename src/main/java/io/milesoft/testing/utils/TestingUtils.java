@@ -2,7 +2,7 @@ package io.milesoft.testing.utils;
 
 import static java.util.Objects.requireNonNull;
 
-import org.apache.commons.lang3.StringUtils;
+import io.milesoft.commons.utils.StringUtils;
 
 public class TestingUtils {
 
